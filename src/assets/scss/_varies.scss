@@ -1,0 +1,35 @@
+/* 字体颜色 */
+$color333: #333;
+$color666: #666;
+$color999: #999;
+$ccc: #ccc;
+$black: #111;
+$white: #fff;
+
+/* 背景颜色 */
+$bodyBg: #eaedf4;
+$headerNavBg: #08cbd3;
+$logoBg: #10bfc6;
+$navMenuBg: #f5faff;
+
+$green: #3fae2e;
+$red: #ff3600;
+$bgColor: #f4f4f4;
+$yellow: #e4c175; // 会员图标色
+$cover: rgba(49, 49, 49, 0.7); // 遮罩层颜色
+$coverBox: rgba(255, 255, 255, 0.2); // 商品过期遮罩层颜色
+$btnDisabled: #ccc;
+
+/* 边框颜色 */
+$bor-color-l: #e4e4e4; // 浅色
+$bor-color-d: #d6d6d6; // 深色
+
+/* 字体大小 */
+//取值：xx-small | x-small | small | medium | large | x-large | xx-large
+$fontXXS: 12px;
+$fontXS: 13px;
+$fontS: 14px;
+$fontM: 16px;
+$fontL: 18px;
+$fontXL: 20px;
+$fontXXL: 30px;
