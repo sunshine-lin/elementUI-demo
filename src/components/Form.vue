@@ -1,4 +1,6 @@
 <template>
+<div>
+<!-- 多选框 -->
    <el-select  v-model="selectValue" 
                :multiple="false"
                size="large"
@@ -16,6 +18,8 @@
       :value="item.value">
     </el-option>
   </el-select>
+ 
+  </div>
 </template>
 
 <script>
@@ -42,6 +46,7 @@
         selectValue: '',
         isLoading: true
       }
+      
     },
     methods: {
       selcetAjax (status) {
@@ -55,9 +60,6 @@
              },1000)
           }
         }
-      },
-      selectChange () {
-        console.log(this.selectValue)
       }
     }
   }
