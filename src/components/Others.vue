@@ -1,13 +1,13 @@
 <template>
-  <el-table highlight-current-row
-    :data="tableData5"
-    style="width: 100%">
+  <el-table highlight-current-row stripe @row-key="rowKey(row)"
+    :data="tableData5" 
+    style="width: 100%" >
     <el-table-column type="expand">
       <template scope="props">
         
-      <el-table :show-header="false" highlight-current-row
-        :data="tableData6"
-        style="width: 100%">
+      <el-table :show-header="false" highlight-current-row  stripe 
+        :data="tableData6" @row-key="rowKey(row)"
+        style="width: 100%" show-summary>
         <el-table-column
           label="序号"
           width="46"
@@ -15,6 +15,7 @@
         </el-table-column>
         <el-table-column
           label="商品 ID"
+          :formatter="formatter"
           prop="id">
         </el-table-column>
         <el-table-column
@@ -61,6 +62,9 @@
     padding: 0;
     /*padding-left: 50px;*/
 
+  }
+  .current-row>td{
+    background: #f99 !important;
   }
 </style>
 
@@ -145,6 +149,14 @@
       console.log(1)
       var el = $('.el-table_1_column_1 .el-icon-arrow-right');
       console.log(el)
+    },
+    methods: {
+      rowKey (row) {
+        console.log(row)
+      },
+      formatter (row, column, cellValue) {
+        return  cellValue + '1111'
+      }
     }
   }
 </script>
