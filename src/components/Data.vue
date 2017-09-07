@@ -6,9 +6,7 @@
         stripe
         border
         tooltip-effect="light"
-        @row-click="rowClick"
-
-      > 
+        @row-click="rowClick"> 
       <el-table-column
         label="序号"
         width="100"

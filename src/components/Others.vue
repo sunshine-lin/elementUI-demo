@@ -1,57 +1,150 @@
 <template>
-<!-- 弹出框 -->
-	<div id="Dialog">
-   <el-button type="text" @click="dialogVisible = true">点击打开 Dialog</el-button>
+  <el-table highlight-current-row
+    :data="tableData5"
+    style="width: 100%">
+    <el-table-column type="expand">
+      <template scope="props">
+        
+      <el-table :show-header="false" highlight-current-row
+        :data="tableData6"
+        style="width: 100%">
+        <el-table-column
+          label="序号"
+          width="46"
+          prop="xxx">
+        </el-table-column>
+        <el-table-column
+          label="商品 ID"
+          prop="id">
+        </el-table-column>
+        <el-table-column
+          label="商品名称"
+          prop="name">
+        </el-table-column>
+        <el-table-column
+          label="描述"
+          prop="desc">
+        </el-table-column>
+      </el-table>
 
-   <el-dialog
-     :visible.sync="dialogVisible"
-      title="提示"
-     size="large"
-     @open="dialogOpen"
-     >
-     <v-table ></v-table>
-     <span slot="footer" class="dialog-footer">
-       <el-button @click="dialogVisible = false">取 消</el-button>
-       <el-button type="primary" @click.native="enterClick">确 定</el-button>
-     </span>
-   </el-dialog>
-	</div>
+      </template>
+    </el-table-column>
+    <el-table-column
+      label="商品 ID"
+      prop="id">
+    </el-table-column>
+    <el-table-column
+      label="商品名称"
+      prop="name">
+    </el-table-column>
+    <el-table-column
+      label="描述"
+      prop="desc">
+    </el-table-column>
+  </el-table>
 </template>
-<script type="text/ecmascript-6">
-import VTable from './Data.vue'
-    export default {
-    	porps: {},
-    	components: {
-        VTable
-      },
-    	data () {
-    		return {
-          dialogVisible: false
-    		}
-    	},
-    	computed: {},
-    	created () {},
-    	mounted () {},
-    	methods: {
-        handleClose(done) {
-               this.$confirm('确认关闭？')
-                 .then(_ => {
-                   done();
-                 })
-                 .catch(_ => {});
-             },
-      enterClick () {
-        alert('enterClick')
-      },
-      dialogOpen () {
-        // 弹框打开时 可以发送ajax
+
+<style>
+  .demo-table-expand {
+    font-size: 0;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .el-table__expanded-cell{
+    padding: 0;
+    /*padding-left: 50px;*/
+
+  }
+</style>
+
+<script>
+  export default {
+    data() {
+      return {
+        tableData5: [{
+          id: '12987122',
+          name: '好滋好味鸡蛋仔',
+          category: '江浙小吃、小吃零食',
+          desc: '荷兰优质淡奶，奶香浓而不腻',
+          address: '上海市普陀区真北路',
+          shop: '王小虎夫妻店',
+          shopId: '10333'
+        }, {
+          id: '12987123',
+          name: '好滋好味鸡蛋仔',
+          category: '江浙小吃、小吃零食',
+          desc: '荷兰优质淡奶，奶香浓而不腻',
+          address: '上海市普陀区真北路',
+          shop: '王小虎夫妻店',
+          shopId: '10333'
+        }, {
+          id: '12987125',
+          name: '好滋好味鸡蛋仔',
+          category: '江浙小吃、小吃零食',
+          desc: '荷兰优质淡奶，奶香浓而不腻',
+          address: '上海市普陀区真北路',
+          shop: '王小虎夫妻店',
+          shopId: '10333'
+        }, {
+          id: '12987126',
+          name: '好滋好味鸡蛋仔',
+          category: '江浙小吃、小吃零食',
+          desc: '荷兰优质淡奶，奶香浓而不腻',
+          address: '上海市普陀区真北路',
+          shop: '王小虎夫妻店',
+          shopId: '10333'
+        }],
+        tableData6: [{
+          xxx: '',
+          id: '12987122',
+          name: '好滋好味鸡蛋仔',
+          category: '江浙小吃、小吃零食',
+          desc: '荷兰优质淡奶，奶香浓而不腻',
+          address: '上海市普陀区真北路',
+          shop: '王小虎夫妻店',
+          shopId: '10333'
+        }, {
+          xxx: ``,
+          id: '12987123',
+          name: '好滋好味鸡蛋仔',
+          category: '江浙小吃、小吃零食',
+          desc: '荷兰优质淡奶，奶香浓而不腻',
+          address: '上海市普陀区真北路',
+          shop: '王小虎夫妻店',
+          shopId: '10333'
+        }, {
+            xxx: ``,
+          id: '12987125',
+          name: '好滋好味鸡蛋仔',
+          category: '江浙小吃、小吃零食',
+          desc: '荷兰优质淡奶，奶香浓而不腻',
+          address: '上海市普陀区真北路',
+          shop: '王小虎夫妻店',
+          shopId: '10333'
+        }, {
+            xxx: ``,
+          id: '12987126',
+          name: '好滋好味鸡蛋仔',
+          category: '江浙小吃、小吃零食',
+          desc: '荷兰优质淡奶，奶香浓而不腻',
+          address: '上海市普陀区真北路',
+          shop: '王小虎夫妻店',
+          shopId: '10333'
+        }],
+        tableData7:[]
       }
+    },
+    mounted(){
+      console.log(1)
+      var el = $('.el-table_1_column_1 .el-icon-arrow-right');
+      console.log(el)
     }
   }
 </script>
-<style rel="stylesheet" lang="scss">
-#Dialog {
-
-}
-   
-</style>
