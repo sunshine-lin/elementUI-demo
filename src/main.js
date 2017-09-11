@@ -12,6 +12,7 @@ Vue.use(ElementUI)
 import './assets/js/jquery.js'
 Vue.config.productionTip = false
 
+import './assets/vue/globalComponents.js'
 // import '@/assets/vue/router.js'
 /* eslint-disable no-new */
 new Vue({

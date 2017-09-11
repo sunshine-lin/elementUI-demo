@@ -6,7 +6,7 @@
  */
 import Vue from 'vue'
 // import BackBottomBtn from '@/components/common/BackBottomBtn.vue'
-// import HeaderNav from '@/components/common/HeaderNav.vue'
+import Pagination from '@/components/common/Pagination.vue'
 
 // Vue.component('g-backBottomBtn', BackBottomBtn)
-// Vue.component('g-headerNav', HeaderNav)
+Vue.component('g-pagination', Pagination)
