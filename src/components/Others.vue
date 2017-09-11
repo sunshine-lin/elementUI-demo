@@ -1,6 +1,6 @@
 <template>
 <div>
-
+  <g-searchBox></g-searchBox>
   <g-pagination :ruleForm="ruleForm" @emitPaginationChange="paginationChange"></g-pagination>
   </div>
 </template>
