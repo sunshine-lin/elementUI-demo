@@ -10,8 +10,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 Vue.use(ElementUI)
 import './assets/js/jquery.js'
+import './assets/js/jQuery.print.js'
 Vue.config.productionTip = false
-
 import './assets/vue/globalComponents.js'
 // import '@/assets/vue/router.js'
 /* eslint-disable no-new */

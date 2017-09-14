@@ -1,7 +1,7 @@
 <template>
 	<div id="Data">
 <!-- 表格 -->
-    <el-table class="tableStyle"
+    <el-table class="tableStyle" id="print"
         :data="tableData"
         stripe
         border
@@ -73,10 +73,22 @@
           >
          </el-pagination>
        </div>
+       <el-button type="primary" size="large" @click="printPage">打印</el-button>
        <!-- 徽章 -->
        <el-badge is-dot class="item">数据查询</el-badge>
        <el-badge class="item" :value="4" max="99">数字</el-badge>
        <el-badge class="item" :value="104" :max="99">数字</el-badge>
+       <div id="print3">
+         <div class="print2" v-for="n in 5">
+           <ul>
+             <li>00001</li>
+             <li>00002</li>
+             <li>00003</li>
+             <li>00004</li>
+           </ul>
+         </div>
+       </div>
+      
 	</div>
 </template>
 <script type="text/ecmascript-6">
@@ -124,6 +136,13 @@
         handleCurrentChange (curPage) {
           console.log(curPage)
           this.curPage = curPage
+        },
+        printPage () {
+          console.log($)
+          $('#print3').print({
+            mediaPrint: true,
+            title: '打印标题！！！！'
+          })
         }
       }
     }
@@ -138,6 +157,22 @@
   
    .tableStyle{
     // width: 500px;
+   }
+   #print3{
+     width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border:1px solid #111;
+   }
+   .print2{
+    margin-top: 600px;
+   
+    li{
+      font-size: 16px;
+      color: #333;
+      line-height: 2em;
+      border-bottom: 1px solid #ccc;
+    }
    }
 }
    
